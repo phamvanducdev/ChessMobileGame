@@ -1,4 +1,4 @@
-import 'package:chess_mobile_game/models/piece.dart';
+import 'package:chess_mobile_game/domain/models/piece.dart';
 import 'package:chess_mobile_game/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,7 +29,7 @@ class SquareWidget extends StatelessWidget {
         color: type == SquareType.white ? AppColors.boardWhite : AppColors.boardBlack,
         child: Stack(
           children: [
-            isSelected ? Container(color: AppColors.selected.withOpacity(0.5)) : Container(),
+            isSelected ? Container(color: AppColors.boardSelected.withOpacity(0.5)) : Container(),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
               child: piece != null ? SvgPicture.asset(piece!.assets) : null,
@@ -40,7 +40,7 @@ class SquareWidget extends StatelessWidget {
                       width: 16,
                       height: 16,
                       decoration: ShapeDecoration(
-                        color: AppColors.selected.withOpacity(0.5),
+                        color: AppColors.boardSelected.withOpacity(0.5),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),

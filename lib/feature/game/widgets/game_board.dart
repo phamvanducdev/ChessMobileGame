@@ -1,5 +1,5 @@
-import 'package:chess_mobile_game/game_board/components.dart/square.dart';
-import 'package:chess_mobile_game/models/piece.dart';
+import 'package:chess_mobile_game/feature/game/widgets/square.dart';
+import 'package:chess_mobile_game/domain/models/piece.dart';
 import 'package:chess_mobile_game/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -162,10 +162,6 @@ class _GameBoardWidgetState extends State<GameBoardWidget> {
 
   bool _isInValidMoves(int row, int colum) {
     return validMoves.any((element) => element[0] == row && element[1] == colum);
-  }
-
-  bool _isKingCheck() {
-    return false;
   }
 
   void _validMoves(int row, int colum, ChessPiece? piece) {

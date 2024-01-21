@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "278312857856",
+    "project_id": "chess-mobile-game",
+    "storage_bucket": "chess-mobile-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278312857856:android:2e445e12f16dbf920e83e5",
+        "android_client_info": {
+          "package_name": "com.ducpv.chessMobileGame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhU3XNG-2oPqzVBpj2NDECICPDHDepM98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCDz1n9aYTu7lbDE_bWHPXQnq9M1Qp7faI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>278312857856</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ducpv.chessMobileGame.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>chess-mobile-game</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chess-mobile-game.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:278312857856:ios:dd61a7308e8c11510e83e5</string>
+</dict>
+</plist>
