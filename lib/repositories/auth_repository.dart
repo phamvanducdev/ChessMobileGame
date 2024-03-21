@@ -9,6 +9,8 @@ abstract class AuthRepository {
   Future<void> signIn(AuthModel params);
   Future<void> signUp(AuthModel params);
   Future<void> signOut();
+
+  Future<User?> getUserById(String userId);
 }
 
 class AuthRepositoryImpl extends AuthRepository {
@@ -41,5 +43,10 @@ class AuthRepositoryImpl extends AuthRepository {
   Future<void> signOut() async {
     await AppSharedPref.setUserLogged(null);
     UserProvider.setUserLogged(null);
+  }
+
+  @override
+  Future<User?> getUserById(String userId) {
+    return _firestoreService.getUserInfo(userId);
   }
 }

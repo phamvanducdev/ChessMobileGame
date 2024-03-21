@@ -12,8 +12,13 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  UserProvider.initialize();
-  runApp(ChessMobileGameApp());
+  await UserProvider.initialize();
+  runApp(
+    MultiProvider(
+      providers: DependencyInjection.providers,
+      child: ChessMobileGameApp(),
+    ),
+  );
 }
 
 class ChessMobileGameApp extends StatefulWidget {
@@ -26,14 +31,10 @@ class ChessMobileGameApp extends StatefulWidget {
 class _ChessMobileGameAppState extends State<ChessMobileGameApp> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: DependencyInjection.providers,
-      child: MaterialApp.router(
-        title: 'ChessMobileGame',
-        debugShowCheckedModeBanner: false,
-        routerConfig: appRouter,
-        theme: appTheme,
-      ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: appRouter,
+      theme: appTheme,
     );
   }
 }

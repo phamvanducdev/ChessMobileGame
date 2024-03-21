@@ -1,6 +1,7 @@
 import 'package:chess_mobile_game/providers/user_provider.dart';
 import 'package:chess_mobile_game/repositories/auth_repository.dart';
 import 'package:chess_mobile_game/repositories/game_repository.dart';
+import 'package:chess_mobile_game/routers/app_page.dart';
 import 'package:chess_mobile_game/ui/home/home_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             const SizedBox(height: 100.0),
             ElevatedButton(
-              onPressed: () => context.go('/game/x3p81x'),
+              onPressed: () => context.push(AppPage.GAME.pathParameters('x3p81x')),
               child: Text('JoinGame'),
             ),
             UserProvider.userLogged != null
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                 : Container(),
             UserProvider.userLogged == null
                 ? ElevatedButton(
-                    onPressed: () => context.go('/auth'),
+                    onPressed: () => context.push(AppPage.AUTH.path),
                     child: Text('Login'),
                   )
                 : ElevatedButton(

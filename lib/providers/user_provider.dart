@@ -5,11 +5,11 @@ class UserProvider {
   static User? _userLogged;
   static User? get userLogged => _userLogged;
 
-  static void initialize() async {
+  static Future<void> initialize() async {
     setUserLogged(await AppSharedPref.getUserLogged());
   }
 
-  static void setUserLogged(User? user) {
-    _userLogged = user;
+  static void setUserLogged(User? userLogged) {
+    _userLogged = userLogged;
   }
 }

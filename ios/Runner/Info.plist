@@ -22,14 +22,28 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>FlutterDeepLinkingEnabled</key>
+	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
+		<!-- SignIn-Google -->
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.278312857856-732ccecb58el63vq3ajhdjgdctoc0b63</string>
+			</array>
+		</dict>
+		<!-- AppDeepLink -->
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.ducpv.chess</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>appscheme</string>
 			</array>
 		</dict>
 	</array>
